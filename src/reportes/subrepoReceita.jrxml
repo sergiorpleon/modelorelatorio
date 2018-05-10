@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteReceita" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1ba3ae89-a4e5-4041-ad9e-10a265d90aa8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="267"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="categoria" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.String"/>
+	<field name="valor" class="java.lang.String"/>
+	<field name="total" class="java.lang.Double"/>
+	<field name="coordenada" class="java.lang.String"/>
+	<variable name="totalgeneral" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{total}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="335" y="3" width="83" height="20" uuid="c89baef8-6907-4834-8ef8-514dd016ac6f"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RECEITAS:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="21" width="715" height="1" uuid="4245fed1-11a0-4bb8-9263-9afc9b6bdc84"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="4" y="0" width="55" height="20" uuid="55dfd751-7e0d-4365-a2bc-7ec4c1e4c43e"/>
+				<text><![CDATA[N/O]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="157" y="0" width="140" height="20" uuid="62f36b55-f2ec-4c59-b22d-45c454a14d2c"/>
+				<text><![CDATA[CATEGORIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="511" y="0" width="59" height="20" uuid="26ecf4c6-a3cc-4e16-8744-062d8bbf98ad"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[QTDATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="578" y="0" width="60" height="20" uuid="964c8496-770b-4433-a61a-83a8b95e847d"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[VALOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="646" y="0" width="59" height="20" uuid="4fcabdea-3467-4ec6-9602-2191b5a98ba4"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="72" y="0" width="80" height="20" uuid="4a22b492-7c03-4cd9-b58f-409d5a128805"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[COORDENADAS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="72" y="0" width="80" height="28" uuid="44c8ed3f-a937-4cc9-8dd3-63323808aa3d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{coordenada}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="28" width="715" height="1" uuid="4f6bef82-0096-46e2-8e20-2c797fd9c291"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="645" y="0" width="60" height="28" uuid="cea35d06-67f2-45ee-bb53-d7055aadc9dc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="0" width="65" height="28" uuid="807c4d7f-a6f8-4a22-827d-523899bc65a3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="157" y="0" width="349" height="28" uuid="291bbfef-cef5-4178-b064-a300c82e002c"/>
+				<textElement verticalAlignment="Middle">
+					<font isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single" tabStopWidth="100"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="0" width="44" height="28" uuid="b704963e-82d5-4f22-9ace-fb41a38927a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="578" y="0" width="60" height="28" uuid="34fb5519-0ae3-4e0c-ac66-97ec669d8bdc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="612" y="0" width="93" height="20" uuid="47bb0639-0308-4d36-a881-b337f11da53a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{totalgeneral}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="541" y="0" width="71" height="20" uuid="98729458-dae8-4479-b7e4-4aee1becc763"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Total General:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

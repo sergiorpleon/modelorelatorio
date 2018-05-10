@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteSubgrupo" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="792" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="eebbfbc7-5e3d-4911-b3fb-cd1c299250c5">
+	<property name="ireport.zoom" value="1.3310000000000033"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="subgrupo" class="java.lang.String"/>
+	<field name="categoriar" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="10" width="706" height="20" backcolor="#FFFFFF" uuid="7478d201-e9b8-43ac-9be1-e53dbabe03a2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="15" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subgrupo}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="12" y="33" width="707" height="20" uuid="ce4cf776-ed79-48e5-ab1e-1a5baac5696a"/>
+				<dataSourceExpression><![CDATA[$F{categoriar}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src\\reportes\\reporteCategoria.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

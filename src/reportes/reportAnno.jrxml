@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportAnno" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9934eb4-ddce-4db3-9ff6-84535f44e99a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="anno" class="java.lang.String"/>
+	<parameter name="fac" class="java.lang.String"/>
+	<field name="receita" class="java.lang.String"/>
+	<field name="despesa" class="java.lang.String"/>
+	<field name="diferencia" class="java.lang.String"/>
+	<field name="anterior" class="java.lang.String"/>
+	<field name="actual" class="java.lang.String"/>
+	<field name="mes" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="228" splitType="Stretch">
+			<staticText>
+				<reportElement x="158" y="81" width="97" height="37" uuid="67f7cc28-5b75-4124-89a2-9525c8e6cc64"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Institución:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="10" width="554" height="65" uuid="b65842d8-dfdd-4b4b-b2e0-ad964be88b05"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="28" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Universidade José Eduardo dos Santos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="121" width="636" height="66" uuid="e20f5dc5-f849-4dd5-8b98-e0151cede6c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatorio Financeiro sobre receitas e despesas provenientes de emolumentos, custas, taxas e propinas]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="10" width="130" height="100" uuid="ce3b0a65-6656-4029-8223-b4f6463862fe"/>
+				<imageExpression><![CDATA["src\\reportes\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="22" y="197" width="66" height="25" uuid="a4a902eb-d450-4d0e-9095-8608c89b8eaa"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AÑO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="197" width="132" height="25" uuid="9e9b8057-1a1e-4a2b-8fed-456e69551037"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{anno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="81" width="439" height="37" uuid="751c2fbf-cdaf-4f06-b57b-330fe06c7722"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fac}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="134" y="3" width="100" height="20" uuid="5767304f-2fbc-43e9-98c6-c0e57faeefce"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[RECEITAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="2" width="100" height="20" uuid="783d8a28-c19f-4cc1-9943-b6c7ffdce3fa"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DESPESAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="3" width="123" height="20" uuid="2c51b767-61f4-442a-b8db-88baf78aa1d4"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[SALDO MENSUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="3" width="116" height="20" uuid="7e08d821-ff82-4fcf-95e8-345d8fbbc7e0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[SALDO ANTERIOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="617" y="3" width="100" height="20" uuid="81cdb904-77d0-4cac-a9ae-f527fc0aaff1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[SALDO ACTUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="3" width="89" height="20" uuid="3ab77629-90b0-428e-a905-41293f566b69"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[MES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="24" width="707" height="1" uuid="111249fe-17bf-492e-a1f7-9a2acc9519fb"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<line>
+				<reportElement x="22" y="22" width="707" height="1" uuid="1296aae9-b188-4696-b502-627fa1342f87"/>
+			</line>
+			<textField>
+				<reportElement x="134" y="0" width="100" height="23" uuid="a02567ff-3344-415e-9a27-c605ba734adb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="100" height="23" uuid="0374199c-7faa-4f96-be95-2356c9d01437"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{despesa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="123" height="23" uuid="cb656895-9c12-4ec5-89b5-2573cccea541"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diferencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="116" height="23" uuid="053fcbbe-8eb9-487c-b217-1dce1f885e9d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{anterior}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="617" y="0" width="100" height="23" uuid="45d81e70-e15d-480a-a60b-e002bf8e9f7f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{actual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="0" width="89" height="23" uuid="106f4f43-9224-4200-83b0-5d58a22f701f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

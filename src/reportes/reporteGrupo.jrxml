@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteSubgrupo" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eebbfbc7-5e3d-4911-b3fb-cd1c299250c5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="anno" class="java.lang.String"/>
+	<parameter name="mes" class="java.lang.String"/>
+	<parameter name="fac" class="java.lang.String"/>
+	<field name="grupo" class="java.lang.String"/>
+	<field name="subgruposr" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="274" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="120" width="637" height="97" uuid="ac5f7293-8108-43b7-98b7-4235c56cb389"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatorio Financeiro sobre receitas e despesas provenientes de emolumentos, custas, taxas e propinas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="10" width="555" height="65" uuid="09b3f90c-50b2-4f42-bdfd-45a8ff2bcf80"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="28" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Universidade José Eduardo dos Santos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="80" width="91" height="37" uuid="619d6ed4-6de2-4ba9-89e8-9d624d9e4994"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Institución:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="34" y="10" width="130" height="100" uuid="761d065d-4dc3-47b9-9b56-c3c079bcf718"/>
+				<imageExpression><![CDATA["src\\reportes\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="3" y="221" width="210" height="31" uuid="783058df-6d7a-4bb1-a2bb-25880439a1a8"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Receita:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="249" width="42" height="22" uuid="df09a622-db01-4e87-8997-60927d005472"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ano:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="464" y="249" width="44" height="22" uuid="b1810356-1a7b-4760-bf50-62f54593da22"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mes:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="282" y="80" width="440" height="30" uuid="ab34f087-1132-41e8-aa75-32e7f15b3e99"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="249" width="100" height="22" uuid="fc7e7090-fab0-417b-811d-891df8ea8696"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{anno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="508" y="249" width="100" height="23" uuid="2170e666-18b8-412e-937c-0e90355eb435"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="141" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-19" y="15" width="787" height="20" backcolor="#66CCFF" uuid="6f977005-7c01-459a-8d2e-f9ae63dc98dc"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Transparent" x="-18" y="15" width="787" height="20" uuid="7bb5885d-6687-458f-b000-b10c8956e8c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grupo}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="-18" y="37" width="787" height="100" uuid="73e7bbdc-8fb1-4ece-8735-425fe0909d31"/>
+				<dataSourceExpression><![CDATA[$F{subgruposr}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src\\reportes\\reporteSubgrupo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>

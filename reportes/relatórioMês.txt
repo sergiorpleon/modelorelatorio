@@ -1,0 +1,84 @@
+                                                    
+                                                    
+                                                    
+           Universidade José Eduardo dos Santos     
+                                                    
+                                                    
+                                                    
+            InstitFaculdade de Ciências Agrárias    
+            ución:                                  
+                                                    
+                                                    
+       Relatorio Financeiro sobre receitas e        
+       despesas provenientes de emolumentos,        
+              custas, taxas e propinas              
+                                                    
+                                                    
+  Reporte                                           
+  Mes:                                              
+               Año2000     MesMaio                  
+                                                    
+                                                    
+                                                    
+                         RECEIT                     
+   N/O COORD CATEGORIA               QTDAVALO TOTA  
+                                                    
+   1   null  Prova de examen de       1.0100. 100.  
+             acceso                    Total100.00  
+                                                    
+                                                    
+                                                    
+                                                    
+                         DESPE                      
+                                                    
+   N/O Nro COORATA CATEGORIA     DESCRIPCIO   VAL   
+                                                    
+                                                    
+                                                    
+                                                    
+ martes 21                     Page  2              
+                                                    
+
+
+                                                    
+                                                    
+                                                    
+   N/O Nro COORATA CATEGORIA     DESCRIPCIO   VAL   
+   1   1   null016-Combustiveis e1             1.0  
+              05-19Lubrificantes                    
+   2   2   null016-Subsidios a   12           12.0  
+              05-19precos                           
+                                                    
+                                       Total  13.0  
+                                                    
+                                                    
+                                                    
+                                                    
+   RESUMO POR                                       
+   RECEITA              100.0                       
+   DESPESAS              13.0                       
+   	Despesas de Bens      1.0                       
+   	Despesas de             0                       
+   	Juros                   0                       
+                                                    
+   	Pessoal                 0                       
+   	Subsidios e          12.0                       
+   TOTAL MÊS             87.0                       
+   TOTAL ANTERIOR         0.0                       
+   TOTAL CURRENT         87.0                       
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+ martes 21                     Page  2              
+                                                    
+
+
